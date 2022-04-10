@@ -1,0 +1,47 @@
+{
+  "name": "nuxt-daim-ui",
+  "version": "1.0.0",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/module.mjs",
+      "require": "./dist/module.cjs"
+    }
+  },
+  "main": "./dist/module.cjs",
+  "types": "./dist/types.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "lint": "eslint --ext .js,.ts,.vue --ignore-path .eslintignore .",
+    "lint:fix": "yarn run lint --fix",
+    "prepack": "nuxt-module-build",
+    "dev": "nuxi dev playground",
+    "dev:build": "nuxi build playground",
+    "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground"
+  },
+  "dependencies": {
+    "@nuxt/kit": "npm:@nuxt/kit-edge@latest",
+    "daim-ui": "1.2.0"
+  },
+  "devDependencies": {
+    "@nuxt/module-builder": "latest",
+    "@nuxtjs/eslint-config": "9.0.0",
+    "@nuxtjs/eslint-config-typescript": "9.0.0",
+    "@typescript-eslint/eslint-plugin": "5.18.0",
+    "@typescript-eslint/parser": "5.18.0",
+    "@unocss/vite": "0.30.12",
+    "@vue/eslint-config-standard": "6.1.0",
+    "eslint": "latest",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-nuxt": "3.2.0",
+    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-vue": "8.5.0",
+    "nuxt3": "latest",
+    "prettier": "2.6.2",
+    "typescript": "4.5.4",
+    "unocss": "0.30.12"
+  }
+}
